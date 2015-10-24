@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TypeView" customModule="DrawerDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="301"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUQ-Kx-fF7">
+                    <rect key="frame" x="309" y="10" width="22" height="22"/>
+                    <connections>
+                        <action selector="endEdit:" destination="iN0-l3-epB" eventType="touchUpInside" id="n6H-27-52y"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已选栏目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k35-QU-5yn">
+                    <rect key="frame" x="17" y="47" width="56" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLP-AY-Lvv" customClass="TypeButton" customModule="DrawerDemo" customModuleProvider="target">
+                    <rect key="frame" x="17" y="74" width="60" height="29"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="dT6-T1-ENj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="淘宝天猫">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" title="淘宝天猫">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILl-It-fJM" customClass="TypeButton" customModule="DrawerDemo" customModuleProvider="target">
+                    <rect key="frame" x="94" y="74" width="60" height="29"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="0cb-lq-jL4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="微商">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNd-NQ-pS9" customClass="TypeButton" customModule="DrawerDemo" customModuleProvider="target">
+                    <rect key="frame" x="271" y="42" width="60" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="sep-ol-UiU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="编辑">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MK5-CB-l2v" customClass="TypeButton" customModule="DrawerDemo" customModuleProvider="target">
+                    <rect key="frame" x="171" y="74" width="60" height="29"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="V2Y-aF-XtD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="唯品会">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBg-ZE-xib" customClass="TypeButton" customModule="DrawerDemo" customModuleProvider="target">
+                    <rect key="frame" x="248" y="74" width="60" height="29"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="4SJ-Jd-G8s"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="京东">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nad-QL-rjl" customClass="TypeButton" customModule="DrawerDemo" customModuleProvider="target">
+                    <rect key="frame" x="17" y="154" width="60" height="29"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="c4a-S6-Svz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="跨境">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ky0-Cf-Gye" customClass="TypeButton" customModule="DrawerDemo" customModuleProvider="target">
+                    <rect key="frame" x="94" y="154" width="60" height="29"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Gsi-Jd-ybK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="跨境">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可选栏目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rB7-Zb-5W4">
+                    <rect key="frame" x="17" y="120" width="56" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbo-CG-ApI" customClass="TypeButton" customModule="DrawerDemo" customModuleProvider="target">
+                    <rect key="frame" x="171" y="154" width="60" height="29"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="jxj-4E-BQZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="跨境">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="wNd-NQ-pS9" firstAttribute="trailing" secondItem="GUQ-Kx-fF7" secondAttribute="trailing" id="8ik-ec-gm3"/>
+                <constraint firstItem="dBg-ZE-xib" firstAttribute="top" secondItem="MK5-CB-l2v" secondAttribute="top" id="HFI-n2-npM"/>
+                <constraint firstItem="Ky0-Cf-Gye" firstAttribute="leading" secondItem="Nad-QL-rjl" secondAttribute="trailing" constant="17" id="JGp-qz-K4b"/>
+                <constraint firstItem="k35-QU-5yn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="47" id="KZZ-Rd-9Us"/>
+                <constraint firstItem="ILl-It-fJM" firstAttribute="leading" secondItem="QLP-AY-Lvv" secondAttribute="trailing" constant="17" id="KmR-qc-LyY"/>
+                <constraint firstItem="Nad-QL-rjl" firstAttribute="leading" secondItem="rB7-Zb-5W4" secondAttribute="leading" id="KsV-D3-5UP"/>
+                <constraint firstItem="rB7-Zb-5W4" firstAttribute="top" secondItem="QLP-AY-Lvv" secondAttribute="bottom" constant="17" id="Na4-Ne-Z8h"/>
+                <constraint firstItem="QLP-AY-Lvv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="RJh-EF-Bvx"/>
+                <constraint firstItem="tbo-CG-ApI" firstAttribute="leading" secondItem="Ky0-Cf-Gye" secondAttribute="trailing" constant="17" id="VwH-n6-RCa"/>
+                <constraint firstItem="rB7-Zb-5W4" firstAttribute="leading" secondItem="k35-QU-5yn" secondAttribute="leading" id="XFA-ZD-KEi"/>
+                <constraint firstItem="Ky0-Cf-Gye" firstAttribute="top" secondItem="Nad-QL-rjl" secondAttribute="top" id="Xke-0Y-m2o"/>
+                <constraint firstItem="Nad-QL-rjl" firstAttribute="top" secondItem="rB7-Zb-5W4" secondAttribute="bottom" constant="17" id="YYY-iv-GnS"/>
+                <constraint firstItem="MK5-CB-l2v" firstAttribute="top" secondItem="ILl-It-fJM" secondAttribute="top" id="ah2-FN-AH1"/>
+                <constraint firstItem="tbo-CG-ApI" firstAttribute="top" secondItem="Ky0-Cf-Gye" secondAttribute="top" id="fsp-B4-nx2"/>
+                <constraint firstItem="dBg-ZE-xib" firstAttribute="leading" secondItem="MK5-CB-l2v" secondAttribute="trailing" constant="17" id="g4Q-q6-Uhx"/>
+                <constraint firstItem="ILl-It-fJM" firstAttribute="top" secondItem="QLP-AY-Lvv" secondAttribute="top" id="gH7-Y7-TQh"/>
+                <constraint firstItem="MK5-CB-l2v" firstAttribute="leading" secondItem="ILl-It-fJM" secondAttribute="trailing" constant="17" id="gwf-0J-Yjn"/>
+                <constraint firstItem="GUQ-Kx-fF7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="qzz-wd-v2k"/>
+                <constraint firstItem="wNd-NQ-pS9" firstAttribute="top" secondItem="GUQ-Kx-fF7" secondAttribute="bottom" constant="10" id="ucN-kQ-Vdz"/>
+                <constraint firstItem="k35-QU-5yn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="xRs-nv-BK1"/>
+                <constraint firstAttribute="trailing" secondItem="GUQ-Kx-fF7" secondAttribute="trailing" constant="17" id="ySE-cA-D42"/>
+                <constraint firstItem="QLP-AY-Lvv" firstAttribute="top" secondItem="k35-QU-5yn" secondAttribute="bottom" constant="10" id="zcQ-DE-YKK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="optionalBtn1" destination="Nad-QL-rjl" id="g9B-2e-hOk"/>
+                <outlet property="optionalBtn2" destination="Ky0-Cf-Gye" id="4EX-Xg-JbL"/>
+                <outlet property="optionalBtn3" destination="tbo-CG-ApI" id="veN-D7-tS9"/>
+                <outlet property="selectedBtn1" destination="QLP-AY-Lvv" id="xFt-Fr-FwV"/>
+                <outlet property="selectedBtn2" destination="ILl-It-fJM" id="WOH-59-juo"/>
+                <outlet property="selectedBtn3" destination="MK5-CB-l2v" id="WrT-Dg-88j"/>
+                <outlet property="selectedBtn4" destination="dBg-ZE-xib" id="1B5-Yf-poR"/>
+            </connections>
+            <point key="canvasLocation" x="305" y="177.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e8L-0a-lfh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Other Controller-->
+        <scene sceneID="8aO-yB-UfF">
+            <objects>
+                <viewController id="e8L-0a-lfh" customClass="OtherController" customModule="DrawerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yME-HY-1c3"/>
+                        <viewControllerLayoutGuide type="bottom" id="pEN-sU-rdf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QTg-FW-RyW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gnO-uN-Put">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="e8L-0a-lfh" id="NEq-Tw-noa"/>
+                                    <outlet property="delegate" destination="e8L-0a-lfh" id="OIm-I5-RTC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gnO-uN-Put" firstAttribute="leading" secondItem="QTg-FW-RyW" secondAttribute="leading" id="A32-PZ-Arb"/>
+                            <constraint firstItem="gnO-uN-Put" firstAttribute="top" secondItem="yME-HY-1c3" secondAttribute="bottom" constant="44" id="DjW-si-oZ6"/>
+                            <constraint firstItem="pEN-sU-rdf" firstAttribute="top" secondItem="gnO-uN-Put" secondAttribute="bottom" id="gl5-FK-26g"/>
+                            <constraint firstAttribute="trailing" secondItem="gnO-uN-Put" secondAttribute="trailing" id="nLE-Hc-eHG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="gnO-uN-Put" id="DDX-HP-nGI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lpw-1C-YxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="-16"/>
+        </scene>
+    </scenes>
+</document>

@@ -26,7 +26,7 @@ class ViewController: UIViewController,OnewControllerDelegate{
         return nav.topViewController as! TwoController
         }()
     
-    //SettingView
+    //LeftSettingView
     lazy var leftView:UIView = {
         var leftView =  UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
         leftView.backgroundColor = UIColor.redColor()
@@ -42,6 +42,14 @@ class ViewController: UIViewController,OnewControllerDelegate{
         btn2.addTarget(self, action: "changeVC:", forControlEvents: UIControlEvents.TouchUpInside)
         return leftView
         }()
+    
+    //RightSettingView
+    lazy var rightView:UIView = {
+        var leftView =  UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+        leftView.backgroundColor = UIColor.lightGrayColor()
+        return leftView
+        }()
+    
     
     //左边两个按钮的监听方法
     func changeVC(sender:UIButton){
@@ -64,10 +72,70 @@ class ViewController: UIViewController,OnewControllerDelegate{
         self.tabbarVC.selectedIndex = 0
         if let _ = self.tabbarVC.selectedViewController {
             self.view.addSubview(leftView)
+            self.view.addSubview(rightView)
             self.view.addSubview(tabbarVC.view)
             
         }
+
+        //添加kvo
+        self.tabbarVC.view.addObserver(self, forKeyPath: "transform", options:
+            .New, context: nil)
+        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    //kvo监听方法
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        if keyPath == "transform" {
+            if (self.tabbarVC.view.transform.tx > 0) {
+                self.leftView.hidden = false;
+                self.rightView.hidden = true;
+            }else if(self.tabbarVC.view.transform.tx < 0){
+                self.rightView.hidden = false;
+                self.leftView.hidden = true;
+            }
+        }
+    }
+    
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touch = touches.first
+        let preLocation = touch?.previousLocationInView(self.view)
+        let currentLocation = touch?.locationInView(self.view)
+        if let _ =  currentLocation,_ = preLocation{
+            let offsetX = (currentLocation?.x)! - (preLocation?.x)!
+            getTransformByOffsetX(offsetX)
+        }
+        
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        var offsetX = self.tabbarVC.view.transform.tx
+        let screenW = UIScreen.mainScreen().bounds.width
+        if (offsetX > screenW * 0.5) {
+            offsetX = 300
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                self.tabbarVC.view.transform = self.tabbarVC.view.transform.tx - offsetX == 0 ? CGAffineTransformIdentity : CGAffineTransformMakeTranslation(300, 0)
+            })
+            return
+        }else if (offsetX < -screenW * 0.5){
+            offsetX = -300
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                self.tabbarVC.view.transform = self.tabbarVC.view.transform.tx - offsetX == 0 ? CGAffineTransformIdentity : CGAffineTransformMakeTranslation(-300, 0)
+            })
+            return
+        }
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.tabbarVC.view.transform = CGAffineTransformIdentity
+        })
+        
+    }
+    
+    
+    
+    private func getTransformByOffsetX(offsetx:CGFloat){
+        self.tabbarVC.view.transform = CGAffineTransformMakeTranslation(self.tabbarVC.view.transform.tx + offsetx, 0)
     }
 
     override func didReceiveMemoryWarning() {
