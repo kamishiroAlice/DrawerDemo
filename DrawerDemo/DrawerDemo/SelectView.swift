@@ -16,15 +16,17 @@ class SelectView: UITableViewCell ,UICollectionViewDataSource,UICollectionViewDe
     @IBOutlet weak var selectTitleLabel: UILabel!
     @IBOutlet weak var SelectCollectionView: UICollectionView!
     @IBOutlet weak var selectFlowLayout: UICollectionViewFlowLayout!
+    
     weak var delegate: SelectViewDelegate?
-    var typeArr:[AnyObject] = [] 
+    //存放type标题数组
+    var typeArr:[AnyObject] = []
+    //加号按钮的点击
     @IBAction func plusBtn(sender: AnyObject) {
         delegate?.showTypeView(typeArr.count == 0 ? nil : typeArr)
     }
     
+    //MARK: - 注册nib
     override func awakeFromNib() {
-        let nib = UINib(nibName: "SelectColloctionViewCell", bundle: nil)
-        print("\(nib)")
         SelectCollectionView!.registerNib(UINib(nibName: "SelectColloctionViewCell", bundle: nil), forCellWithReuseIdentifier: "SelectColloctionViewCell")
     }
 
@@ -36,7 +38,11 @@ class SelectView: UITableViewCell ,UICollectionViewDataSource,UICollectionViewDe
     override func layoutSubviews() {
         super.layoutSubviews()
         self.contentView.hidden = true
-        SelectCollectionView.scrollEnabled = true
+        settingLayout()
+    }
+    
+    //MARK: - 设置样式
+    private func settingLayout(){
         SelectCollectionView.dataSource  = self
         SelectCollectionView.delegate  = self
         SelectCollectionView.pagingEnabled = true
@@ -47,6 +53,7 @@ class SelectView: UITableViewCell ,UICollectionViewDataSource,UICollectionViewDe
         selectFlowLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
     }
     
+    //MARK: - UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SelectColloctionViewCell", forIndexPath: indexPath) as! SelectColloctionViewCell
         cell.typeLabel.text = typeArr.count == 0 ? "京东" : typeArr[indexPath.row] as! String
@@ -61,14 +68,5 @@ class SelectView: UITableViewCell ,UICollectionViewDataSource,UICollectionViewDe
         print("1")
     }
     
-        
-    
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }

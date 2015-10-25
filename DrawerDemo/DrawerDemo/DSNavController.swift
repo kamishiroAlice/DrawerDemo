@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-
+//导航栏的样式
 public enum DSNavStyle : Int {
     case Main
     case Back
@@ -17,20 +17,16 @@ public enum DSNavStyle : Int {
 class DSNavController: UIViewController,BackNavBarDelegate {
 
     var navStyle:DSNavStyle = DSNavStyle.Main
-    
+    //首页样式
     private lazy var navBarView:UIView = {
         var navBarView = UINib(nibName: "MainNavBar", bundle: nil).instantiateWithOwner(self, options: nil).last as! UIView
         return navBarView
     }()
-    
+    //返回样式
     private lazy var backBarView:BackNavBar = {
         var backBarView = UINib(nibName: "BackNavBar", bundle: nil).instantiateWithOwner(self, options: nil).last as! BackNavBar
         return backBarView
         }()
-    
-    override func loadView() {
-        super.loadView()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,21 +60,4 @@ class DSNavController: UIViewController,BackNavBarDelegate {
         self.navigationController?.popToRootViewControllerAnimated(true)
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

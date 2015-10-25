@@ -67,6 +67,20 @@ class ViewController: UIViewController,OnewControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //装载UI
+        setupUI()
+        
+        //添加kvo
+        self.tabbarVC.view.addObserver(self, forKeyPath: "transform", options:
+            .New, context: nil)
+        
+        //添加手势
+        addGesture()
+        
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    private func setupUI(){
         oneVC.delegate = self
         twoVC.delegate = self
         self.tabbarVC.selectedIndex = 0
@@ -74,14 +88,51 @@ class ViewController: UIViewController,OnewControllerDelegate{
             self.view.addSubview(leftView)
             self.view.addSubview(rightView)
             self.view.addSubview(tabbarVC.view)
-            
         }
-
-        //添加kvo
-        self.tabbarVC.view.addObserver(self, forKeyPath: "transform", options:
-            .New, context: nil)
+    }
+    
+    private func addGesture(){
         
-        // Do any additional setup after loading the view, typically from a nib.
+        let leftedgeGesture = UIScreenEdgePanGestureRecognizer(target: self, action: "ScreenEdgePG:")
+        leftedgeGesture.edges = UIRectEdge.Left
+        
+        let rightedgeGesture = UIScreenEdgePanGestureRecognizer(target: self, action: "ScreenEdgePG:")
+        rightedgeGesture.edges = UIRectEdge.Right
+        
+        self.view.addGestureRecognizer(leftedgeGesture)
+        self.view.addGestureRecognizer(rightedgeGesture)
+    }
+    
+    //手势方法
+    @objc private func ScreenEdgePG(recognizer:UIScreenEdgePanGestureRecognizer){
+        
+        if recognizer.state == UIGestureRecognizerState.Began || recognizer.state == UIGestureRecognizerState.Changed{
+            
+            let currentlocation = recognizer.translationInView(self.tabbarVC.view)
+            self.tabbarVC.view.transform = CGAffineTransformMakeTranslation(currentlocation.x, 0)
+            
+        }else if recognizer.state == UIGestureRecognizerState.Ended{
+            var offsetX = self.tabbarVC.view.transform.tx
+            let screenW = UIScreen.mainScreen().bounds.width
+            if (offsetX > screenW * 0.5) {
+                offsetX = 300
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    self.tabbarVC.view.transform = self.tabbarVC.view.transform.tx - offsetX == 0 ? CGAffineTransformIdentity : CGAffineTransformMakeTranslation(300, 0)
+                })
+                return
+            }else if (offsetX < -screenW * 0.5){
+                offsetX = -300
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    self.tabbarVC.view.transform = self.tabbarVC.view.transform.tx - offsetX == 0 ? CGAffineTransformIdentity : CGAffineTransformMakeTranslation(-300, 0)
+                })
+                return
+            }
+            
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                self.tabbarVC.view.transform = CGAffineTransformIdentity
+            })
+        }
+   
     }
     
     //kvo监听方法
@@ -97,45 +148,16 @@ class ViewController: UIViewController,OnewControllerDelegate{
         }
     }
     
-    
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch = touches.first
-        let preLocation = touch?.previousLocationInView(self.view)
-        let currentLocation = touch?.locationInView(self.view)
-        if let _ =  currentLocation,_ = preLocation{
-            let offsetX = (currentLocation?.x)! - (preLocation?.x)!
-            getTransformByOffsetX(offsetX)
-        }
-        
-    }
-    
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        var offsetX = self.tabbarVC.view.transform.tx
-        let screenW = UIScreen.mainScreen().bounds.width
-        if (offsetX > screenW * 0.5) {
-            offsetX = 300
-            UIView.animateWithDuration(0.5, animations: { () -> Void in
-                self.tabbarVC.view.transform = self.tabbarVC.view.transform.tx - offsetX == 0 ? CGAffineTransformIdentity : CGAffineTransformMakeTranslation(300, 0)
-            })
-            return
-        }else if (offsetX < -screenW * 0.5){
-            offsetX = -300
-            UIView.animateWithDuration(0.5, animations: { () -> Void in
-                self.tabbarVC.view.transform = self.tabbarVC.view.transform.tx - offsetX == 0 ? CGAffineTransformIdentity : CGAffineTransformMakeTranslation(-300, 0)
-            })
-            return
-        }
-        
+       
         UIView.animateWithDuration(0.5, animations: { () -> Void in
             self.tabbarVC.view.transform = CGAffineTransformIdentity
         })
         
     }
     
-    
-    
     private func getTransformByOffsetX(offsetx:CGFloat){
-        self.tabbarVC.view.transform = CGAffineTransformMakeTranslation(self.tabbarVC.view.transform.tx + offsetx, 0)
+        self.tabbarVC.view.transform = CGAffineTransformTranslate(self.tabbarVC.view.transform, offsetx, 0)
     }
 
     override func didReceiveMemoryWarning() {

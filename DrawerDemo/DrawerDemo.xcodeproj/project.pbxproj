@@ -16,14 +16,9 @@
 		C84981C81BDB2F7100A61B30 /* TypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84981C71BDB2F7100A61B30 /* TypeButton.swift */; settings = {ASSET_TAGS = (); }; };
 		C84981CA1BDB328700A61B30 /* TypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84981C91BDB328700A61B30 /* TypeView.swift */; settings = {ASSET_TAGS = (); }; };
 		C87E9BA51BDA6500007CCEC9 /* MainNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87E9BA41BDA6500007CCEC9 /* MainNavBar.xib */; settings = {ASSET_TAGS = (); }; };
-		C87E9BA71BDA65DE007CCEC9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C87E9BA61BDA65DE007CCEC9 /* icon.png */; settings = {ASSET_TAGS = (); }; };
 		C87E9BA91BDA6818007CCEC9 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9BA81BDA6818007CCEC9 /* IconButton.swift */; settings = {ASSET_TAGS = (); }; };
 		C87E9BAB1BDA6A22007CCEC9 /* DSNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9BAA1BDA6A22007CCEC9 /* DSNavController.swift */; settings = {ASSET_TAGS = (); }; };
 		C87E9BAE1BDA6CDA007CCEC9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C87E9BAD1BDA6CDA007CCEC9 /* Podfile */; settings = {ASSET_TAGS = (); }; };
-		C89209D21BDA779300756D7F /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C89209CE1BDA779300756D7F /* 1.png */; settings = {ASSET_TAGS = (); }; };
-		C89209D31BDA779300756D7F /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C89209CF1BDA779300756D7F /* 2.png */; settings = {ASSET_TAGS = (); }; };
-		C89209D41BDA779300756D7F /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = C89209D01BDA779300756D7F /* 3.png */; settings = {ASSET_TAGS = (); }; };
-		C89209D51BDA779300756D7F /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = C89209D11BDA779300756D7F /* 4.png */; settings = {ASSET_TAGS = (); }; };
 		C89209FE1BDAA35400756D7F /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C89209DE1BDAA35400756D7F /* SDWebImagePrefetcher.m */; settings = {ASSET_TAGS = (); }; };
 		C89209FF1BDAA35400756D7F /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C89209E01BDAA35400756D7F /* UIButton+WebCache.m */; settings = {ASSET_TAGS = (); }; };
 		C8920A001BDAA35400756D7F /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C89209E21BDAA35400756D7F /* UIImage+GIF.m */; settings = {ASSET_TAGS = (); }; };
@@ -43,7 +38,6 @@
 		C8920A181BDAA7E700756D7F /* ZWAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8920A171BDAA7E700756D7F /* ZWAdView.m */; settings = {ASSET_TAGS = (); }; };
 		C8920A1A1BDAAB7800756D7F /* SelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8920A191BDAAB7800756D7F /* SelectView.xib */; settings = {ASSET_TAGS = (); }; };
 		C8920A1C1BDAAECC00756D7F /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8920A1B1BDAAECC00756D7F /* SelectView.swift */; settings = {ASSET_TAGS = (); }; };
-		C8920A1E1BDAAF6600756D7F /* SelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8920A1D1BDAAF6600756D7F /* SelectCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C8920A201BDAB4D800756D7F /* SelectColloctionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8920A1F1BDAB4D800756D7F /* SelectColloctionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C894A99A1BDB459700855964 /* SelectColloctionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C894A9991BDB459700855964 /* SelectColloctionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		C896CE191BDAC3BB005D6688 /* ContansCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C896CE181BDAC3BB005D6688 /* ContansCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -69,16 +63,10 @@
 		C84981C71BDB2F7100A61B30 /* TypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeButton.swift; sourceTree = "<group>"; };
 		C84981C91BDB328700A61B30 /* TypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeView.swift; sourceTree = "<group>"; };
 		C87E9BA41BDA6500007CCEC9 /* MainNavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainNavBar.xib; sourceTree = "<group>"; };
-		C87E9BA61BDA65DE007CCEC9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		C87E9BA81BDA6818007CCEC9 /* IconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		C87E9BAA1BDA6A22007CCEC9 /* DSNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSNavController.swift; sourceTree = "<group>"; };
 		C87E9BAD1BDA6CDA007CCEC9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
-		C89209C61BDA72C300756D7F /* DrawerDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawerDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C89209CD1BDA747F00756D7F /* DrawerDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawerDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		C89209CE1BDA779300756D7F /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		C89209CF1BDA779300756D7F /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		C89209D01BDA779300756D7F /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
-		C89209D11BDA779300756D7F /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		C89209DD1BDAA35400756D7F /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
 		C89209DE1BDAA35400756D7F /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
 		C89209DF1BDAA35400756D7F /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
@@ -116,7 +104,6 @@
 		C8920A171BDAA7E700756D7F /* ZWAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWAdView.m; sourceTree = "<group>"; };
 		C8920A191BDAAB7800756D7F /* SelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectView.xib; sourceTree = "<group>"; };
 		C8920A1B1BDAAECC00756D7F /* SelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
-		C8920A1D1BDAAF6600756D7F /* SelectCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewController.swift; sourceTree = "<group>"; };
 		C8920A1F1BDAB4D800756D7F /* SelectColloctionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectColloctionViewCell.xib; sourceTree = "<group>"; };
 		C894A9991BDB459700855964 /* SelectColloctionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectColloctionViewCell.swift; sourceTree = "<group>"; };
 		C896CE181BDAC3BB005D6688 /* ContansCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContansCell.xib; sourceTree = "<group>"; };
@@ -154,17 +141,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C87E9BA31BDA64D4007CCEC9 /* View */ = {
+		C8271B051BDCDAF200DC148F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C87E9BAA1BDA6A22007CCEC9 /* DSNavController.swift */,
+				C8070B4A1BDB5AAE00F76704 /* OtherController.swift */,
+				C8DB95CD1BD9173100A4B102 /* ViewController.swift */,
+				C8DB95DD1BD921DA00A4B102 /* OnewController.swift */,
+				C8DB95DF1BD9221D00A4B102 /* TwoController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C8271B071BDCDB1D00DC148F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				C8DB95CB1BD9173100A4B102 /* AppDelegate.swift */,
+				C89209CD1BDA747F00756D7F /* DrawerDemo-Bridging-Header.h */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		C8271B081BDCDFD600DC148F /* 导航栏 */ = {
+			isa = PBXGroup;
+			children = (
+				C87E9BA81BDA6818007CCEC9 /* IconButton.swift */,
 				C84981B71BDAE96F00A61B30 /* BackNavBar.swift */,
 				C84981B81BDAE96F00A61B30 /* BackNavBar.xib */,
+				C87E9BA41BDA6500007CCEC9 /* MainNavBar.xib */,
+			);
+			name = "导航栏";
+			sourceTree = "<group>";
+		};
+		C8271B0A1BDCE03000DC148F /* 广告栏 */ = {
+			isa = PBXGroup;
+			children = (
 				C8920A161BDAA7E700756D7F /* ZWAdView.h */,
 				C8920A171BDAA7E700756D7F /* ZWAdView.m */,
-				C87E9BA41BDA6500007CCEC9 /* MainNavBar.xib */,
-				C87E9BA81BDA6818007CCEC9 /* IconButton.swift */,
-				C87E9BAA1BDA6A22007CCEC9 /* DSNavController.swift */,
-				C89209C61BDA72C300756D7F /* DrawerDemo-Bridging-Header.h */,
+			);
+			name = "广告栏";
+			sourceTree = "<group>";
+		};
+		C8271B0B1BDCE07F00DC148F /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
 				C8920A191BDAAB7800756D7F /* SelectView.xib */,
 				C8920A1B1BDAAECC00756D7F /* SelectView.swift */,
 				C894A9991BDB459700855964 /* SelectColloctionViewCell.swift */,
@@ -172,10 +192,45 @@
 				C84981C51BDB2E3500A61B30 /* TypeView.xib */,
 				C84981C91BDB328700A61B30 /* TypeView.swift */,
 				C84981C71BDB2F7100A61B30 /* TypeButton.swift */,
+			);
+			name = "分类";
+			sourceTree = "<group>";
+		};
+		C8271B0C1BDCE0A700DC148F /* 文章 */ = {
+			isa = PBXGroup;
+			children = (
 				C896CE181BDAC3BB005D6688 /* ContansCell.xib */,
+			);
+			name = "文章";
+			sourceTree = "<group>";
+		};
+		C8271B0D1BDCE0CC00DC148F /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				C8DB95CF1BD9173100A4B102 /* Main.storyboard */,
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		C8271B0E1BDCE0D500DC148F /* 内容页 */ = {
+			isa = PBXGroup;
+			children = (
 				C896CE1A1BDAC66F005D6688 /* ContansTopView.xib */,
 				C896CE1C1BDAC8EC005D6688 /* ContansCenterView.xib */,
 				C8070B4C1BDB5AD000F76704 /* Other.storyboard */,
+			);
+			name = "内容页";
+			sourceTree = "<group>";
+		};
+		C87E9BA31BDA64D4007CCEC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C8271B0E1BDCE0D500DC148F /* 内容页 */,
+				C8271B0D1BDCE0CC00DC148F /* 首页 */,
+				C8271B0C1BDCE0A700DC148F /* 文章 */,
+				C8271B0B1BDCE07F00DC148F /* 分类 */,
+				C8271B0A1BDCE03000DC148F /* 广告栏 */,
+				C8271B081BDCDFD600DC148F /* 导航栏 */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -252,22 +307,11 @@
 				C87E9BAD1BDA6CDA007CCEC9 /* Podfile */,
 				C87E9BAC1BDA6C4A007CCEC9 /* lib */,
 				C87E9BA31BDA64D4007CCEC9 /* View */,
-				C8DB95CB1BD9173100A4B102 /* AppDelegate.swift */,
-				C8920A1D1BDAAF6600756D7F /* SelectCollectionViewController.swift */,
-				C8DB95CD1BD9173100A4B102 /* ViewController.swift */,
-				C8070B4A1BDB5AAE00F76704 /* OtherController.swift */,
-				C8DB95DD1BD921DA00A4B102 /* OnewController.swift */,
-				C89209CD1BDA747F00756D7F /* DrawerDemo-Bridging-Header.h */,
-				C8DB95DF1BD9221D00A4B102 /* TwoController.swift */,
-				C8DB95CF1BD9173100A4B102 /* Main.storyboard */,
+				C8271B051BDCDAF200DC148F /* Controller */,
+				C8271B071BDCDB1D00DC148F /* Other */,
 				C8DB95D21BD9173100A4B102 /* Assets.xcassets */,
-				C89209CE1BDA779300756D7F /* 1.png */,
-				C89209CF1BDA779300756D7F /* 2.png */,
-				C89209D01BDA779300756D7F /* 3.png */,
-				C89209D11BDA779300756D7F /* 4.png */,
 				C8DB95D41BD9173100A4B102 /* LaunchScreen.storyboard */,
 				C8DB95D71BD9173100A4B102 /* Info.plist */,
-				C87E9BA61BDA65DE007CCEC9 /* icon.png */,
 			);
 			path = DrawerDemo;
 			sourceTree = "<group>";
@@ -345,19 +389,14 @@
 			files = (
 				C896CE191BDAC3BB005D6688 /* ContansCell.xib in Resources */,
 				C8920A1A1BDAAB7800756D7F /* SelectView.xib in Resources */,
-				C89209D21BDA779300756D7F /* 1.png in Resources */,
 				C87E9BAE1BDA6CDA007CCEC9 /* Podfile in Resources */,
-				C87E9BA71BDA65DE007CCEC9 /* icon.png in Resources */,
 				C8DB95D61BD9173100A4B102 /* LaunchScreen.storyboard in Resources */,
-				C89209D51BDA779300756D7F /* 4.png in Resources */,
 				C896CE1B1BDAC66F005D6688 /* ContansTopView.xib in Resources */,
 				C8920A201BDAB4D800756D7F /* SelectColloctionViewCell.xib in Resources */,
-				C89209D31BDA779300756D7F /* 2.png in Resources */,
 				C84981BA1BDAE96F00A61B30 /* BackNavBar.xib in Resources */,
 				C8070B4D1BDB5AD000F76704 /* Other.storyboard in Resources */,
 				C8DB95D31BD9173100A4B102 /* Assets.xcassets in Resources */,
 				C896CE1D1BDAC8EC005D6688 /* ContansCenterView.xib in Resources */,
-				C89209D41BDA779300756D7F /* 3.png in Resources */,
 				C84981C61BDB2E3500A61B30 /* TypeView.xib in Resources */,
 				C87E9BA51BDA6500007CCEC9 /* MainNavBar.xib in Resources */,
 				C8DB95D11BD9173100A4B102 /* Main.storyboard in Resources */,
@@ -426,7 +465,6 @@
 				C8DB95E01BD9221D00A4B102 /* TwoController.swift in Sources */,
 				C8920A081BDAA35400756D7F /* SDImageCache.m in Sources */,
 				C8920A061BDAA35400756D7F /* MKAnnotationView+WebCache.m in Sources */,
-				C8920A1E1BDAAF6600756D7F /* SelectCollectionViewController.swift in Sources */,
 				C89209FE1BDAA35400756D7F /* SDWebImagePrefetcher.m in Sources */,
 				C8DB95DE1BD921DA00A4B102 /* OnewController.swift in Sources */,
 				C8DB95CE1BD9173100A4B102 /* ViewController.swift in Sources */,

@@ -14,6 +14,7 @@ protocol OnewControllerDelegate: NSObjectProtocol {
 
 class OnewController: DSNavController,UITableViewDelegate,UITableViewDataSource,ZWAdViewDelagate,SelectViewDelegate,TypeViewDelegate{
     @IBOutlet weak var tableView: UITableView!
+    //MARK: - 广告View
     private lazy var adsView:ZWAdView = {
         let adsView = ZWAdView(frame: CGRectMake(0, 0, self.tableView.bounds.width, 200))
         /**广告链接*/
@@ -27,7 +28,7 @@ class OnewController: DSNavController,UITableViewDelegate,UITableViewDataSource,
         adsView.delegate = self
         return adsView
     }()
-    
+    //MARK: - 分类View
     private lazy var selectView:SelectView = {
         let selectView:SelectView =  UINib(nibName: "SelectView", bundle: nil).instantiateWithOwner(self, options: nil).last as! SelectView
             selectView.delegate = self
@@ -37,6 +38,7 @@ class OnewController: DSNavController,UITableViewDelegate,UITableViewDataSource,
     @IBAction func settingBtnClick(sender: AnyObject) {
         delegate?.changePosition()
     }
+    
     weak var delegate: OnewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,16 +99,12 @@ class OnewController: DSNavController,UITableViewDelegate,UITableViewDataSource,
         self.navigationController?.pushViewController(otherVC!, animated: true)
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    //MARK: - 广告的点击
     func adView(adView: ZWAdView!, didDeselectAdAtNum num: Int) {
         
     }
     
+    //MARK: - SelectViewDelegate 分类View的显示
     func showTypeView(types: [AnyObject]?) {
         let typeView:TypeView = UINib(nibName: "TypeView", bundle: nil).instantiateWithOwner(self, options: nil).last as! TypeView
         self.view.addSubview(typeView)
@@ -128,25 +126,12 @@ class OnewController: DSNavController,UITableViewDelegate,UITableViewDataSource,
         
     }
     
-    
+    //MARK: - TypeViewDelegate
     func reloadSelectView(titleArr: [AnyObject]) {
         let cell =  selectView
         cell.typeArr = titleArr
         cell.SelectCollectionView.reloadData()
         cell.layoutIfNeeded()
     }
-
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
